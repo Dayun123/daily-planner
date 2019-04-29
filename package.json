@@ -4,7 +4,8 @@
   "description": "Simple CLI tool that display's user's email, calendar, etc...",
   "main": "app.js",
   "dependencies": {
-    "googleapis": "^27.0.0"
+    "googleapis": "^27.0.0",
+    "yargs": "^13.2.2"
   },
   "devDependencies": {},
   "scripts": {
