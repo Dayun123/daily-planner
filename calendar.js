@@ -16,12 +16,14 @@ const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
 // time.
 const TOKEN_PATH = 'token.json';
 
-// Load client secrets from a local file.
-fs.readFile('credentials.json', (err, content) => {
-  if (err) return console.log('Error loading client secret file:', err);
-  // Authorize a client with credentials, then call the Google Calendar API.
-  authorize(JSON.parse(content), listEvents);
-});
+function loadCalendar() {
+  // Load client secrets from a local file.
+  fs.readFile('credentials.json', (err, content) => {
+    if (err) return console.log('Error loading client secret file:', err);
+    // Authorize a client with credentials, then call the Google Calendar API.
+    authorize(JSON.parse(content), listEvents);
+  });
+}
 
 /**
  * Create an OAuth2 client with the given credentials, and then execute the
@@ -99,4 +101,8 @@ function listEvents(auth) {
       console.log('No upcoming events found.');
     }
   });
+}
+
+module.exports = {
+  loadCalendar: loadCalendar
 }

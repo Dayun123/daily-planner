@@ -12,6 +12,8 @@ Display the options to the user like so:
 const l = console.log
 // need readline to process user input
 const readline = require('readline');
+// when you require a module, it runs everything in the file. In this case, we will run the listEvents() function which will return the events
+const calendar = require('./calendar')
 
 displayLoginMenu()
 
@@ -30,7 +32,10 @@ rl.on('line', (line) => {
   if (option === '1') {
     l('Option 1 selected')
   } else if (option === '2') {
-    l('Option 2 selected')
+    // display the user's calendar info
+    l('Here are your events...')
+    calendar.loadCalendar()
+    l('End of options')
   } else {
     l(`${option} is not a valid option!`)
   }
