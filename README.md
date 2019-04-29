@@ -13,23 +13,13 @@ curl 'path/to/github/repo'
 ## Usage
 
 ```bash
-node app.js
+node app.js cal --primary
 
-*** Please choose an option below: ***
-| 1. Login
-| 2. Create Account
+*** Upcoming Events for DanielSchroederMusic ***
+| 4-10 from 10pm-2am : Antoine Diel & The Misfit Power : Spotted Cat
+| 4-09 from 5pm-8pm : Antoine Diel Quartet : Hotel Monteleone
 
-1
-
-Username: myUser
-Password: myPassword
-
-*** Hello, Joe Smith, what would you like to 
-see from your daily planner? ***
-| 1. Email
-| 2. Calendar
-
-1
+node app.js email
 
 *** Emails for JoeSmith@gmail.com: ***
 | 4-12 : Renew Your Subscription : Audible@mailer.com
